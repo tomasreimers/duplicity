@@ -1,19 +1,25 @@
 // establish vars so they are global
-var phone = false;
-var tablet = false;
-var desktop = false;
+var duplicity = {
+    phone: false,
+    tablet: false,
+    desktop: false
+};
 
 // checks if screen size change has changed enough to qualify a new view
 function detectScreenSizeChange(forceUpdate){
+    // set default value
+    if (forceUpdate === undefined){
+        forceUpdate = false;
+    }
     // get old screen size
     var oldDevice;
-    if (phone){
+    if (duplicity.phone){
         oldDevice = "phone";
     }
-    else if (tablet){
+    else if (duplicity.tablet){
         oldDevice = "tablet";
     }
-    else if (desktop){
+    else if (duplicity.desktop){
         oldDevice = "desktop";
     }
     else {
@@ -53,12 +59,14 @@ function affectScreenSizeChange(from, to){
     $("body").removeClass("phone tablet desktop");
     // reset HTML elements
     $("[data-display]").css("display", "none");
+    // reset JS vars
+    duplicity.phone = false;
+    duplicity.tablet = false;
+    duplicity.desktop = false;
     // change document
     if (to == "phone"){
         // js vars
-        phone = true;
-        tablet = false;
-        desktop = false;
+        duplicity.phone = true;
         // add css class
         $("body").addClass("phone");
         // show html elements
@@ -66,9 +74,7 @@ function affectScreenSizeChange(from, to){
     }
     else if (to == "tablet"){
         // js vars
-        phone = false;
-        tablet = true;
-        desktop = false;
+        duplicity.tablet = true;
         // add css class
         $("body").addClass("tablet");
         // show html elements
@@ -76,9 +82,7 @@ function affectScreenSizeChange(from, to){
     }
     else {
         // js vars
-        phone = false;
-        tablet = false;
-        desktop = true;
+        duplicity.desktop = true;
         // add css class
         $("body").addClass("desktop");
         // show html elements

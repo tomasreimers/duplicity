@@ -74,16 +74,16 @@
                 }
             }
             function screenSizeChanged(oldDevice, newDevice){
-                if (!phone && $('#navbarButtons').css('display') == 'none'){
+                if (!duplicity.phone && $('#navbarButtons').css('display') == 'none'){
                     toggleMenu();
                 }
-                if (phone){
+                if (duplicity.phone){
                     toggleMenu();
                 }
             }
             $(document).ready(function (){
                 $("#navbarAppear").bind('click', toggleMenu);
-                if (phone){
+                if (duplicity.phone){
                     toggleMenu();
                 }
             });
