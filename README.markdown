@@ -54,7 +54,7 @@ Additionally duplicity will add an aptly named class ('phone', 'tablet', 'deskto
 
 ###Javascript
 
-Duplicity ultimately is a JS library and so it provides some nice JS features:
+Ultimately, duplicity is a JS library and so it provides you with some nice JS features:
 
 The first being three booleans by which you can read the detected device:
 
@@ -64,7 +64,7 @@ duplicity.phone, duplicity.tablet, duplicity.desktop
 
 if (duplicity.phone){
 
-    // do some 
+    // do something 
     
 }
 
