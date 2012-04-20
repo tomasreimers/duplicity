@@ -1,6 +1,6 @@
 ##Duplicity 0.1
 
-*Duplicity is a javascript library which enables the developer to develop responsive sites faster*
+*Duplicity is a javascript library to kickstart responsive web design*
 
 **Duplicity is built on top of [jquery](http://jquery.com/) and requires it to run.**
 
@@ -12,7 +12,7 @@ Duplicity examines the browser width and makes a guess at which device is being 
 * **[640, 1024]:** 'tablet'
 * **(1024, &infin;):** 'desktop'
 
-Also, if the browser is resized, or the phone is rotated, to cause a significant change in screen size (and lead duplicity to classify it as a different device) it will update all the following methods!
+Also, if the browser is resized, or the phone is rotated, causing a significant change in screen size (which leads duplicity to classify it as a different device) it will update all the following methods!
 
 ###HTML
 
